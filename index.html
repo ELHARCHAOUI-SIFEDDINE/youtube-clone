@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navigation Start -->
+    <nav class="flex justify-between items-center p-4 bg-white shadow fixed w-full z-10">
+        <div class="flex items-center">
+            <button class="md:hidden" onclick="toggleMenu()">
+                <img src="img/menu.png" class="w-6 mr-6" alt="Menu">
+            </button>
+            <img src="img/logo.png" class="w-32" alt="Logo">
+        </div>
+        <div class="flex items-center">
+            <div class="hidden md:flex border rounded-full overflow-hidden">
+                <input type="text" placeholder="Search" class="w-64 px-4 py-2 outline-none">
+                <button class="px-4 py-2 bg-gray-200">
+                    <img src="img/search.png" class="w-4" alt="Search">
+                </button>
+            </div>
+            <button class="ml-4 hidden md:block">
+                <img src="img/voice-search.png" class="w-6" alt="Voice Search">
+            </button>
+        </div>
+        <div class="flex items-center">
+            <button class="mx-2 hidden md:block">
+                <img src="img/upload.png" class="w-6" alt="Upload">
+            </button>
+            <button class="mx-2 hidden md:block">
+                <img src="img/more.png" class="w-6" alt="More">
+            </button>
+            <button class="mx-2 hidden md:block">
+                <img src="img/notification.png" class="w-6" alt="Notifications">
+            </button>
+            <button class="ml-4 hidden md:block">
+                <img src="img/4.png" class="w-10 h-10 rounded-full" alt="User">
+            </button>
+        </div>
+    </nav>
+    <!-- Navigation End -->
+
+    <!-- Sidebar Start -->
+    <div id="sidebar" class="fixed top-16 w-64 h-full bg-white p-4 shadow-lg hidden md:block">
+        <div class="mb-4">
+            <a href="#" class="flex items-center mb-4">
+                <img src="img/home.png" class="w-6 mr-4" alt="Home">
+                <p>Home</p>
+            </a>
+            <a href="#" class="flex items-center mb-4">
+                <img src="img/explore.png" class="w-6 mr-4" alt="Explore">
+                <p>Explore</p>
+            </a>
+            <a href="#" class="flex items-center mb-4">
+                <img src="img/subscriprion.png" class="w-6 mr-4" alt="Subscription">
+                <p>Subscription</p>
+            </a>
+            <a href="#" class="flex items-center mb-4">
+                <img src="img/library.png" class="w-6 mr-4" alt="Library">
+                <p>Library</p>
+            </a>
+            <a href="#" class="flex items-center mb-4">
+                <img src="img/history.png" class="w-6 mr-4" alt="History">
+                <p>History</p>
+            </a>
+            <a href="#" class="flex items-center mb-4">
+                <img src="img/playlist.png" class="w-6 mr-4" alt="Playlist">
+                <p>Playlist</p>
+            </a>
+            <a href="#" class="flex items-center mb-4">
+                <img src="img/messages.png" class="w-6 mr-4" alt="Messages">
+                <p>Messages</p>
+            </a>
+            <a href="#" class="flex items-center">
+                <img src="img/show-more.png" class="w-6 mr-4" alt="Show More">
+                <p>Show More</p>
+            </a>
+        </div>
+        <hr class="border-gray-300 mb-4">
+        <div>
+            <h3 class="text-sm text-gray-500 mb-4">Subscribed</h3>
+            <a href="#" class="flex items-center mb-4">
+                <img src="img/vini.jpeg" class="w-8 h-8 rounded-full mr-4" alt="vini">
+                <p>Vini Jr</p>
+            </a>
+            <a href="#" class="flex items-center mb-4">
+                <img src="img/rodrygo.jpeg" class="w-8 h-8 rounded-full mr-4" alt="rodrygo">
+                <p>Rodrygo</p>
+            </a>
+            <a href="#" class="flex items-center mb-4">
+                <img src="img/fede.jpeg" class="w-8 h-8 rounded-full mr-4" alt="fede">
+                <p>Valverde</p>
+            </a>
+            <a href="#" class="flex items-center mb-4">
+                <img src="img/brahim.jpeg" class="w-8 h-8 rounded-full mr-4" alt="diaz">
+                <p>Diaz</p>
+            </a>
+            <a href="#" class="flex items-center">
+                <img src="img/arda.jpeg" class="w-8 h-8 rounded-full mr-4" alt="arda">
+                <p>Arda guler</p>
+            </a>
+        </div>
+    </div>
+    <!-- Sidebar End -->
+
+    <!-- Main Start -->
+    <div class="ml-0 md:ml-64 pt-20 p-4">
+        <div class="mb-8">
+            <img src="img/banner.jpg" class="w-full rounded-lg" alt="Banner">
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- Video List Start -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <a href="video_page.html">
+                    <img src="img/tumb1.jpg" class="w-full" alt="Thumbnail 1">
+                </a>
+                <div class="p-4">
+                    <div class="flex items-start">
+                        <img src="img/RMA.jpg" class="w-10 h-10 rounded-full mr-4" alt="User 4">
+                        <div>
+                            <a href="video_page.html" class="font-semibold block">Mbappe to RMA</a>
+                            <p class="text-sm text-gray-500">Real Madrid</p>
+                            <p class="text-sm text-gray-500">5k views • 1 day ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <a href="video_page.html">
+                    <img src="img/tumb2.jpg" class="w-full" alt="Thumbnail 2">
+                </a>
+                <div class="p-4">
+                    <div class="flex items-start">
+                        <img src="img/RMA.jpg" class="w-10 h-10 rounded-full mr-4" alt="User 4">
+                        <div>
+                            <a href="video_page.html" class="font-semibold block">Best Goals vini </a>
+                            <p class="text-sm text-gray-500">Real Madrid</p>
+                            <p class="text-sm text-gray-500">5k views • 1 day ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <a href="video_page.html">
+                    <img src="img/tumb3.jpg" class="w-full" alt="Thumbnail 3">
+                </a>
+                <div class="p-4">
+                    <div class="flex items-start">
+                        <img src="img/RMA.jpg" class="w-10 h-10 rounded-full mr-4" alt="User 4">
+                        <div>
+                            <a href="video_page.html" class="font-semibold block">All Liga Goals 2024</a>
+                            <p class="text-sm text-gray-500">Real Madrid</p>
+                            <p class="text-sm text-gray-500">5k views • 1 day ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <a href="video_page.html">
+                    <img src="img/tumb4.jpg" class="w-full" alt="Thumbnail 4">
+                </a>
+                <div class="p-4">
+                    <div class="flex items-start">
+                        <img src="img/RMA.jpg" class="w-10 h-10 rounded-full mr-4" alt="User 4">
+                        <div>
+                            <a href="video_page.html" class="font-semibold block">All UFA Goals 24/23</a>
+                            <p class="text-sm text-gray-500">Real Madrid</p>
+                            <p class="text-sm text-gray-500">5k views • 1 day ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <a href="video_page.html">
+                    <img src="img/tumb5.jpg" class="w-full" alt="Thumbnail 5">
+                </a>
+                <div class="p-4">
+                    <div class="flex items-start">
+                        <img src="img/RMA.jpg" class="w-10 h-10 rounded-full mr-4" alt="User 4">
+                        <div>
+                            <a href="video_page.html" class="font-semibold block">RMA 4-0 Celta</a>
+                            <p class="text-sm text-gray-500">Real Madrid</p>
+                            <p class="text-sm text-gray-500">5k views • 1 day ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <a href="video_page.html">
+                    <img src="img/tumb6.jpg" class="w-full" alt="Thumbnail 6">
+                </a>
+                <div class="p-4">
+                    <div class="flex items-start">
+                        <img src="img/RMA.jpg" class="w-10 h-10 rounded-full mr-4" alt="User 4">
+                        <div>
+                            <a href="video_page.html" class="font-semibold block">Final training session </a>
+                            <p class="text-sm text-gray-500">Real Madrid</p>
+                            <p class="text-sm text-gray-500">5k views • 1 day ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <a href="video_page.html">
+                    <img src="img/tumb7.jpg" class="w-full" alt="Thumbnail 7">
+                </a>
+                <div class="p-4">
+                    <div class="flex items-start">
+                        <img src="img/RMA.jpg" class="w-10 h-10 rounded-full mr-4" alt="User 4">
+                        <div>
+                            <a href="video_page.html" class="font-semibold block">RMA 5-3 ATM </a>
+                            <p class="text-sm text-gray-500">Real Madrid</p>
+                            <p class="text-sm text-gray-500">5k views • 1 day ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <a href="video_page.html">
+                    <img src="img/tumb8.jpg" class="w-full" alt="Thumbnail 8">
+                </a>
+                <div class="p-4">
+                    <div class="flex items-start">
+                        <img src="img/RMA.jpg" class="w-10 h-10 rounded-full mr-4" alt="User 4">
+                        <div>
+                            <a href="video_page.html" class="font-semibold block">rodrygo & valvelrde</a>
+                            <p class="text-sm text-gray-500">Real Madrid</p>
+                            <p class="text-sm text-gray-500">5k views • 1 day ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Video List End -->
+        </div>
+    </div>
+    <!-- Main End -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
